@@ -13,8 +13,8 @@ namespace List
 
         public Stack()
         {
-            _items = new T[_defaultCapacity];
             Capacity = _defaultCapacity;
+            _items = new T[Capacity];
             Count = 0;
         }
 

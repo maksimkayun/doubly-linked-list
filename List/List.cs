@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Dynamic;
 
 namespace List
 {
@@ -10,6 +11,8 @@ namespace List
         private Hub<T> tail;
         public int Count { get; protected set; }
 
+        public bool IsEmpty() => Count == 0;
+        
         public void Add(T value)
         {
             Hub<T> hub = new Hub<T>(value);
@@ -23,10 +26,33 @@ namespace List
                 tail.Next = hub;
                 hub.Previous = tail;
             }
+
             tail = hub;
             Count++;
         }
-        
+
+        public T this[int index]
+        {
+            get { return Get(index); }
+            set
+            {
+                T input = value;
+                Hub<T> current = head;
+                int currentIndex = 0;
+                while (currentIndex != index)
+                {
+                    current = current.Next;
+                    currentIndex++;
+                    if (current == null)
+                    {
+                        throw new IndexOutOfRangeException();
+                    }
+                }
+
+                current.Value = input;
+            }
+        } 
+
         public T Get(int index)
         {
             Hub<T> current = head;
@@ -61,7 +87,7 @@ namespace List
             if (current.Previous == null)
             {
                 head = current.Next;
-            } 
+            }
             else if (current.Next == null)
             {
                 current.Previous.Next = null;
@@ -82,6 +108,7 @@ namespace List
             tail = null;
             Count = 0;
         }
+
         IEnumerator<T> IEnumerable<T>.GetEnumerator()
         {
             Hub<T> current = head;
@@ -94,9 +121,9 @@ namespace List
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return ((IEnumerable)this).GetEnumerator();
+            return ((IEnumerable) this).GetEnumerator();
         }
-        
+
         public IEnumerable<T> BackEnumerator()
         {
             Hub<T> current = tail;

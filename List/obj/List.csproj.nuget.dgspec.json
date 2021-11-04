@@ -1,31 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Dushevno\\Desktop\\Git\\List\\List\\List.csproj": {}
+    "C:\\Users\\Dushevno\\Desktop\\GIT\\List\\List\\List.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Dushevno\\Desktop\\Git\\List\\List\\List.csproj": {
+    "C:\\Users\\Dushevno\\Desktop\\GIT\\List\\List\\List.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Dushevno\\Desktop\\Git\\List\\List\\List.csproj",
+        "projectUniqueName": "C:\\Users\\Dushevno\\Desktop\\GIT\\List\\List\\List.csproj",
         "projectName": "List",
-        "projectPath": "C:\\Users\\Dushevno\\Desktop\\Git\\List\\List\\List.csproj",
+        "projectPath": "C:\\Users\\Dushevno\\Desktop\\GIT\\List\\List\\List.csproj",
         "packagesPath": "C:\\Users\\Dushevno\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Dushevno\\Desktop\\Git\\List\\List\\obj\\",
+        "outputPath": "C:\\Users\\Dushevno\\Desktop\\GIT\\List\\List\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "F:\\Visual Studio SDK\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Dushevno\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Dushevno\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

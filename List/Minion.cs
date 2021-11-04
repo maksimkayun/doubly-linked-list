@@ -1,6 +1,8 @@
-﻿namespace List
+﻿using System;
+
+namespace List
 {
-    public class Minion
+    public class Minion : IComparable<Minion>
     {
         public string Name { get; set; }
         public int Age { get; set; }
@@ -9,6 +11,22 @@
         {
             Name = name;
             Age = age;
+        }
+
+        public int CompareTo(Minion? other)
+        {
+            if (Name.Equals(other?.Name) && Age == other?.Age)
+            {
+                return 0;
+            }
+            else if (Age < other?.Age)
+            {
+                return 1;
+            }
+            else
+            {
+                return -1;
+            }
         }
     }
 }

@@ -9,6 +9,11 @@ namespace List
 
         static void Main(string[] args)
         {
+            WorkWithStack.Work();
+        }
+
+        private static void Work()
+        {
             while (true)
             {
                 switch (Menu())
@@ -140,7 +145,7 @@ namespace List
             sb.AppendLine("3.Посмотреть список миньонов");
             sb.AppendLine("4.Посмотреть миньона по индексу");
             sb.AppendLine("5.Изменить имя миньона по индексу");
-            sb.Append("6.Сравнить миньонов");
+            sb.Append    ("6.Сравнить миньонов");
 
             Console.WriteLine(sb);
             int v = Int32.Parse(Console.ReadLine() ?? string.Empty);

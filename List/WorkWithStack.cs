@@ -14,9 +14,9 @@ namespace List
                 stack.Add(value);
             }
 
-            for (int i = 0; i < stack.Count; i++)
+            foreach (var elem in stack)
             {
-                Console.Write($"{stack[i]} ");
+                Console.Write($"{elem} ");
             }
 
             stack.Remove();

@@ -9,7 +9,8 @@ namespace List
 
         static void Main(string[] args)
         {
-            WorkWithStack.Work();
+            // WorkWithStack.Work();
+            Work();
         }
 
         private static void Work()
@@ -158,7 +159,7 @@ namespace List
             int i = 1;
             foreach (var minion in minions)
             {
-                Console.WriteLine($"{i++}. {minion.Name} {minion.Age}");
+                Console.WriteLine(i++ + ". " + minion);
             }
 
             Console.WriteLine();

@@ -105,8 +105,8 @@ namespace List
                             Minion minion = new Minion(name, age);
                             
                             Console.Write($"\nС каким мьоном хотите сравнить? Укажите индекс (1..{minions.Count}): ");
-                            int index = Int32.Parse(Console.ReadLine() ?? string.Empty) - 1;
                             ViewList();
+                            int index = Int32.Parse(Console.ReadLine() ?? string.Empty) - 1;
 
                             int result = minions[index].CompareTo(minion);
                             if (result == 0)

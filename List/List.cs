@@ -69,7 +69,6 @@ namespace List
 
             return current.Value;
         }
-
         public void RemoveAt(int index)
         {
             Hub<T> current = head;

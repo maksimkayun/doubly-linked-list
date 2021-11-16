@@ -8,7 +8,7 @@ namespace List
     {
         private T[] _items;
         public int Count { get; protected set; }
-        public int Capacity { get; set; }
+        public int Capacity { get; protected set; } 
         private const int _defaultCapacity = 5;
 
         public Stack()
@@ -40,10 +40,10 @@ namespace List
 
         public void Add(T item)
         {
-            if (Count == Capacity)
+            if (Count == _items.Length)
             {
                 T[] temp = _items;
-                Capacity = Capacity * 2;
+                Capacity = _items.Length * 2;
                 _items = new T[Capacity];
                 for (int i = 0; i < Count; i++)
                 {

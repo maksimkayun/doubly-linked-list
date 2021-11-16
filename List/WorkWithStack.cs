@@ -11,8 +11,10 @@ namespace List
             for (int i = 0; i < 11; i++)
             {
                 int value = new Random().Next(1, 180);
+                Console.Write(value + " ");
                 stack.Add(value);
             }
+            Console.WriteLine('\n');
 
             foreach (var elem in stack)
             {
